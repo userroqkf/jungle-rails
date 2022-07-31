@@ -1,2 +1,16 @@
-<h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+<h1>Admin Dashboard</h1>
+<br>
+<div class="card">
+  <div class="card-body">
+    Total number of products are <%=@products%>
+  </div>
+</div>
+<br>
+<div class="card">
+  <div class="card-body">
+    Total number of categories are <%=@categories%>
+  </div>
+</div>
+<%# <%= link_to '+ New Product', [:new, :admin, :product], class: 'btn btn-info' %> 
+<%# <%= link_to '+ New Product', [:new, :admin, :product], class: 'btn btn-info' %>
+
