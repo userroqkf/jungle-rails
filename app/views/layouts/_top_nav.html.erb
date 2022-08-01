@@ -43,6 +43,13 @@
         </li> %>
       </ul>
       <ul class="navbar-nav">
+      <li class="nav-link">
+        <% if current_user %>
+          Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout', {:style=>'color:white'} %>
+        <% else %>
+          <%= link_to 'Login', '/login', {:style=>'color:white'} %> | <%= link_to 'Signup', '/signup' , {:style=>'color:white'} %>
+        <% end %>
+      </li>
         <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle text-danger"
@@ -52,7 +59,7 @@
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-            Admin
+          Admin
           </a>
           <ul class="dropdown-menu dropdown-menu-dark">
             <li><%= link_to 'Dashboard', [:admin, :root], class: "nav-link" %></li>
